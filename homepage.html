@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Online Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    #login-section,
+    #shopping-section {
+      margin-bottom: 30px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"],
+    .add-to-cart {
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .add-to-cart {
+      background-color: #2196f3;
+      margin-left: 10px;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .product img {
+      width: 100px;
+      margin-right: 10px;
+    }
+
+    .product span {
+      font-weight: bold;
+    }
+
+    .product input[type="number"] {
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="login-section">
+      <h2>Login</h2>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <input type="submit" value="Log In">
+      </form>
+    </div>
+
+    <div id="shopping-section">
+      <h2>Shopping</h2>
+      <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <span>$10</span>
+        <input type="number" min="1" max="10" value="1">
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <span>$15</span>
+        <input type="number" min="1" max="10" value="1">
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Add more product entries here as needed -->
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code for handling form submission and add
