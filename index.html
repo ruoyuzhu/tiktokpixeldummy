@@ -126,13 +126,26 @@ src="https://www.facebook.com/tr?id=330602114223085&ev=PageView&noscript=1"
         <span>$10</span>
         <input type="number" min="1" max="10" value="1">
         <button class="add-to-cart">Add to Cart</button>
+        <script type="text/javascript">
+              $('#addToCartButton').click(function() {
+                fbq('track', 'Purchase', {currency: "USD", value: 10.00});
+              });
+        </script>
       </div>
 
       <div class="product">
+        
         <img src="product2.jpg" alt="Product 2">
         <span>$15</span>
         <input type="number" min="1" max="10" value="1">
-        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Add to Cart
+        </button>
+        <script type="text/javascript">
+              $('#addToCartButton').click(function() {
+                fbq('track', 'Purchase', {currency: "USD", value: 15.00});
+              });
+        </script>
+        
       </div>
 
       <!-- Add more product entries here as needed -->
