@@ -170,15 +170,16 @@ src="https://www.facebook.com/tr?id=330602114223085&ev=PageView&noscript=1"
         <img src="product2.jpg" alt="Product 2">
         <span>$15</span>
         <input type="number" min="1" max="10" value="1">
-        <button id="test_purchase_tiktok">TikTok Test Shopping Event
+        <button id="test_purchase_tiktok">TikTok Test Shopping Event </button>
+
            <script type="text/javascript">
 		   document.getElementByID("test_purchase_tiktok").onclick = function(){
               //$('#test_purchase_tiktok').click(function() {
 	      // tiktok advanced maching
 	      ttq.identify({
-  		"email": "<hashed_email_address>", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
-  		"phone_number": "<hashed_phone_number>", // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
-  		"external_id": "<hashed_extenal_id>", // A unique ID from the advertiser such as user or external cookie IDs. It must be hashed with SHA256 on the client side.
+  		"email": "sia_dogfood@bytedance.com", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
+  		"phone_number": "+1233455", // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
+  		"external_id": "+1234567", // A unique ID from the advertiser such as user or external cookie IDs. It must be hashed with SHA256 on the client side.
 		});
 	      // send tiktok complete payment event
                 ttq.instance('CIEVSPBC77UFB57U7UH0').track('CompletePayment', {
@@ -192,7 +193,6 @@ src="https://www.facebook.com/tr?id=330602114223085&ev=PageView&noscript=1"
 		});
               });
         </script>
-        </button>
        
         
       </div>
