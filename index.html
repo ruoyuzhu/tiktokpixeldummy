@@ -159,6 +159,34 @@ src="https://www.facebook.com/tr?id=330602114223085&ev=PageView&noscript=1"
         
       </div>
 
+	<div class="product">
+        
+        <img src="product2.jpg" alt="Product 2">
+        <span>$15</span>
+        <input type="number" min="1" max="10" value="1">
+        <button id="test_purchase_tiktok">TikTok Test Event
+           <script type="text/javascript">
+              $('#test_purchase_tiktok').click(function() {
+		      ttq.identify({
+  "email": "<hashed_email_address>", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
+  "phone_number": "<hashed_phone_number>", // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
+  "external_id": "<hashed_extenal_id>", // A unique ID from the advertiser such as user or external cookie IDs. It must be hashed with SHA256 on the client side.
+});
+                ttq.track('CompletePayment', {
+ 		 "contents": [{
+    		"content_id": "1234567", // string. ID of the product. Example: "1077218".
+    		"content_type": "test_product", // string. Either product or product_group.
+    		"content_name": "test_product_name", // string. The name of the page or product. Example: "shirt".
+  		}],
+  		"value": "15", // number. Value of the order or items sold. Example: 100.
+  		"currency": "USD", // string. The 4217 currency code. Example: "USD".
+		});
+              });
+        </script>
+        </button>
+       
+        
+      </div>
       <!-- Add more product entries here as needed -->
     </div>
   </div>
