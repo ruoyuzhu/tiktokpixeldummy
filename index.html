@@ -172,7 +172,8 @@ src="https://www.facebook.com/tr?id=330602114223085&ev=PageView&noscript=1"
         <input type="number" min="1" max="10" value="1">
         <button id="test_purchase_tiktok">TikTok Test Shopping Event
            <script type="text/javascript">
-              $('#test_purchase_tiktok').click(function() {
+		   document.getElementByID("test_purchase_tiktok").onclick = function(){
+              //$('#test_purchase_tiktok').click(function() {
 	      // tiktok advanced maching
 	      ttq.identify({
   		"email": "<hashed_email_address>", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
@@ -180,7 +181,7 @@ src="https://www.facebook.com/tr?id=330602114223085&ev=PageView&noscript=1"
   		"external_id": "<hashed_extenal_id>", // A unique ID from the advertiser such as user or external cookie IDs. It must be hashed with SHA256 on the client side.
 		});
 	      // send tiktok complete payment event
-                ttq.track('CompletePayment', {
+                ttq.instance('CIEVSPBC77UFB57U7UH0').track('CompletePayment', {
  		 "contents": [{
     		"content_id": "1234567", // string. ID of the product. Example: "1077218".
     		"content_type": "test_product", // string. Either product or product_group.
